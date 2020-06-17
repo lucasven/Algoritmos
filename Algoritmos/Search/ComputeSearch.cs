@@ -6,9 +6,9 @@ using System.Text;
 
 namespace Algoritmos.Search
 {
-    public static class ComputeLinearSearch
+    public static class ComputeSearch
     {
-        public static void Computar(int[] array)
+        public static void Executar(int[] array)
         {
             Stopwatch sw = new Stopwatch();
             //sw.Start();

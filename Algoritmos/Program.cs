@@ -3,6 +3,7 @@ using System;
 using System.Diagnostics;
 using Algoritmos.Fatorial;
 using System.Linq;
+using Algoritmos.Sort;
 
 namespace Algoritmos
 {
@@ -11,10 +12,17 @@ namespace Algoritmos
         static void Main(string[] args)
         {
             Console.WriteLine("Inicio dos testes de algoritmos");
-            var array = GerarArray(2000000000);
-
-            ComputeLinearSearch.Computar(array);
             
+            //var array = GerarArray(2000000000);
+            //ComputeSearch.Executar(array);
+
+            var arraySort = GerarArraySort(100000);
+            ComputeSort.Executar(arraySort);
+
+            //var arrayOrdered = GerarArray(20000);
+            //Console.WriteLine("ordenar array ordenado");
+            //ComputeSort.Executar(arrayOrdered);
+
             Stopwatch sw = new Stopwatch();
 
 
@@ -37,7 +45,18 @@ namespace Algoritmos
             Console.ReadLine();
         }
 
-        static int[] GerarArray(int tamanho)
+        internal static int[] GerarArraySort(int tamanho)
+        {
+            var retorno = new int[tamanho];
+            for (int i = 1; i <= tamanho; i++)
+            {
+                retorno[tamanho-i] = i;
+            }
+
+            return retorno;
+        }
+
+        internal int[] GerarArray(int tamanho)
         {
             var retorno = new int[tamanho];
             for (int i = 0; i < tamanho; i++)
