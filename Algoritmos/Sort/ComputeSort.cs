@@ -12,6 +12,7 @@ namespace Algoritmos.Sort
         {
             Stopwatch sw = new Stopwatch();
 
+
             sw.Start();
             SelectionSort.Sort(array, array.Length);
             sw.Stop();
